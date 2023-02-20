@@ -35,4 +35,13 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            transform.position = new Vector3Int(-12, 1, -38);
+        }
+    }
+
 }
